@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 using System.Threading;
 
 using Context = System.IntPtr;
@@ -8,6 +9,7 @@ using Filter = System.UInt16;
 
 namespace InputInterceptorNS {
 
+    [SupportedOSPlatform("windows")]
     public abstract class Hook<TCallbackStroke> : IDisposable {
 
         public delegate void CallbackAction(ref TCallbackStroke stroke);

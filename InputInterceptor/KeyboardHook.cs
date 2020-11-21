@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Versioning;
 using System.Threading;
 
 using Filter = System.UInt16;
 
 namespace InputInterceptorNS {
 
+    [SupportedOSPlatform("windows")]
     public class KeyboardHook : Hook<KeyStroke> {
 
         private struct KeyData {

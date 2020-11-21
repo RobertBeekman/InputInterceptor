@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Runtime.Versioning;
 using System.Threading;
 
 using Filter = System.UInt16;
 
 namespace InputInterceptorNS {
 
+    [SupportedOSPlatform("windows")]
     public class MouseHook : Hook<MouseStroke> {
 
         private static readonly Int32 VirtualScreenOriginLeft;

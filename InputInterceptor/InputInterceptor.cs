@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 using System.Security.Principal;
 using InputInterceptorNS.Properties;
 using Microsoft.Win32;
@@ -14,6 +15,7 @@ using Precedence = System.Int32;
 
 namespace InputInterceptorNS {
 
+    [SupportedOSPlatform("windows")]
     public static class InputInterceptor {
 
         private static DllWrapper DllWrapper;
